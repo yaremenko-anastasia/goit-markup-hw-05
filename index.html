@@ -468,10 +468,10 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop">
+    <div class="backdrop is-open">
         <div class="modal">
             <button type="button" class="modal-close">
-             <svg class ="modal-icon" width="8" height="8">
+             <svg class ="modal-icon-close" width="8" height="8">
                 <use href="./images/icons.svg#icon-close"></use>
              </svg>
             </button>
@@ -491,13 +491,14 @@
               id="user-name"
               required/>
               <svg class="modal-icon" width="18px" height="24px">
-                <use href="./images/icons.svg#icon-twitter"></use>
+                <use href="./images/icons.svg#icon-person"></use>
               </svg>
             </div>
             </div>
 
             <div class="modal-field">
               <label for="user-name" class="modal-label">Phone</label>
+              <div class="modal-field-wrap">
               <input 
               type="tel" 
               name="user-phone" 
@@ -505,19 +506,28 @@
               placeholder=""
               required
               />
+              <svg class="modal-icon" width="18px" height="24px">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
             </div>
 
             <div class="modal-field">
               <label for="user-name" class="modal-label">Email</label>
+              <div class="modal-field-wrap">
               <input 
               type="email" 
               name="user-email" 
               class="modal-input" 
               placeholder=""/>
+              <svg class="modal-icon" width="18px" height="24px">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </div>
             </div>
 
             <div class="modal-field">
-              <label for="user-comment">Comment</label>
+              <label for="user-comment" class="modal-label">Comment</label>
               <textarea 
               name="user-comment" 
               id="user-comment" 
@@ -525,7 +535,18 @@
               placeholder="Text input"
               ></textarea>
             </div>
-              <button type="submit">Send</button>
+
+            <div class="modal-field">
+            <input type="checkbox" name="policy" id="policy" value="true" class="modal-check visually-hidden">
+            <label for="policy" class="modal-check-text"> 
+              <span>
+<svg class="icon-check" width="10" height="8">
+  <use href="./images/icons.svg#icon-galka"></use>
+</svg>
+            </span>I accept the terms and conditions of the Privacy Policy</label>
+          </div>
+
+              <button type="submit" class="modal-btn">Send</button>
             </form>
         </div>
     </div>
