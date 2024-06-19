@@ -718,7 +718,7 @@ fill: #f4f4fd;
 }
 
 .footer-form {
-    display: flex;
+  
     margin-left: 80px;
 }
 .footer-field-wrap {
@@ -768,5 +768,14 @@ padding-top: 8px;
 padding-bottom: 8px;
 background: #4d5ae5;
 display: flex;
+margin-left: 24px;
 }
 
+.footer-modal-icon {
+    fill: #fff;
+   
+}
+
+.footer-btn-field {
+
+}
