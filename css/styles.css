@@ -773,7 +773,8 @@ margin-left: 24px;
 
 .footer-modal-icon {
     fill: #fff;
-   
+    position: absolute;
+    right: 260px;
 }
 
 .footer-btn-field {
