@@ -802,6 +802,8 @@ margin-left: 24px;
 align-items: center;
 justify-content: center;
 font-family: "Roboto", sans-serif;
+min-width: 165px;
+cursor: pointer;
 }
 
 .footer-modal-icon {
