@@ -570,12 +570,14 @@ align-items: center;
 .backdrop{
     width: 100%;
     height: 100%;
-    background-color: rgba(30, 24, 35, 0.452);
+    background-color: rgba(46, 47, 66, 0.4);
     position: fixed;
     top: 0;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-open {
@@ -595,6 +597,8 @@ align-items: center;
     transform: translate(-50%, -50%);
     padding: 24px;
     padding-top: 72px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 
 }
 
@@ -606,10 +610,13 @@ align-items: center;
     position: absolute;
     top: 24px;
     right: 24px;
-    border-radius: 100%;
-    background-color: #F4F4FD;
-    border: 2px solid #E7E9FC;
-
+    border-radius: 50%;
+    background-color: #e7e9fc;
+    justify-content: center; 
+    border: 1px solid rgba(0, 0, 0, 0.1); 
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-icon-close{
@@ -617,6 +624,7 @@ align-items: center;
     align-items: center;
     justify-content: center;
     fill: #2E2F42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close:hover,
@@ -624,8 +632,17 @@ align-items: center;
 {
     background-color: #404BBF;
     fill: #fff;
+    border: none;
 }
 
+
+.modal-close:focus,
+.modal-close:focus .modal-icon-close
+{
+    background-color: #404bbf;
+    border: none;
+    fill: #fff;
+}
 
 
 .modal-title{
@@ -635,6 +652,7 @@ text-align: center;
 color: #2e2f42;
 min-width: 360px;
 margin-bottom: 16px;
+line-height: 1.5;
 }
 
 .modal-input {
@@ -645,6 +663,7 @@ margin-bottom: 16px;
     background-color: transparent;
     padding-left: 38px;
     outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:focus {
@@ -657,25 +676,29 @@ margin-bottom: 16px;
 }
 
 .modal-label {
-    display: inline-block;
+    display: block; 
     margin-bottom: 4px;
     font-weight: 400;
 font-size: 12px;
-line-height: 1.16667;
 letter-spacing: 0.04em;
 color: #8e8f99;
+line-height: 1.17;
 }
 
 .modal-field {
     margin-bottom: 8px;
 }
 
+.modal-field-comment{
+    margin-bottom: 16px;
+}
 .modal-icon {
     fill: #2e2f42;
     position: absolute;
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 
@@ -695,33 +718,45 @@ color: #8e8f99;
     resize: none;
     font-weight: 400;
 font-size: 12px;
-line-height: 1.16667;
+line-height: 1.17; 
 letter-spacing: 0.04em;
 color: rgba(46, 47, 66, 0.4);
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.modal-text:focus
+{
+    border-color: #4D5AE5; 
+}
 
 .modal-btn {
     display: block;
     margin: 0 auto;
     border-radius: 4px;
 padding: 16px 32px;
-width: 169px;
 height: 56px;
 border: none;
 background-color: #4D5AE5;
 color:#fff;
+min-width: 169px;
+font-weight: 500;
+line-height: 1.5 ;
+letter-spacing: 0.04em;
+cursor: pointer;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-check-text {
     font-weight: 400;
 font-size: 12px;
-line-height: 1.16667;
+line-height: 1.17;
 letter-spacing: 0.04em;
 color: #8e8f99;
 display: flex;
 align-items: center;
 }
+
+
 
 .modal-check-text span {
     width: 16px;
@@ -729,10 +764,17 @@ align-items: center;
     border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     margin-right: 8px;
-    display: flex;
+    display: inline-flex; 
     align-items: center;
     justify-content: center;
     fill:transparent;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.privacy-policy {
+    color: #4d5ae5;
 }
 
 .modal-check:checked + .modal-check-text span {
@@ -816,6 +858,6 @@ cursor: pointer;
     gap: 24px;
 }
 
-.footer-label{
-
+.modal-field-policy{
+    margin-bottom: 24px;
 }
