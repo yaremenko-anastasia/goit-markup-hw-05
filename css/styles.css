@@ -743,6 +743,7 @@ fill: #f4f4fd;
 
 .footer-form {
   display: flex;
+  gap: 24px;
     margin-left: 80px;
 }
 .footer-field-wrap {
@@ -813,5 +814,5 @@ font-family: "Roboto", sans-serif;
 }
 
 .footer-label{
-    
+
 }
