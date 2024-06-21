@@ -742,7 +742,7 @@ fill: #f4f4fd;
 }
 
 .footer-form {
-  
+  display: flex;
     margin-left: 80px;
 }
 .footer-field-wrap {
@@ -766,6 +766,10 @@ height: 40px;
 background-color: transparent;
 padding-left: 16px;
 color:#fff;
+font-size: 12px;
+line-height: 2;
+letter-spacing: 0.04em;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); 
 }
 
 .footer-input::placeholder {
@@ -795,6 +799,8 @@ background: #4d5ae5;
 display: flex;
 margin-left: 24px;
 align-items: center;
+justify-content: center;
+font-family: "Roboto", sans-serif;
 }
 
 .footer-modal-icon {
@@ -802,3 +808,6 @@ align-items: center;
     margin-left: 16px;
 }
 
+.footer-email{
+    gap: 24px;
+}
